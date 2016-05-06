@@ -1388,6 +1388,7 @@ p.shadow {
 
     .wrapper.style4 {
 					text-align: center;
+          margin-top: -2em;
 		}
 
 	body.is-touch .wrapper.style3 {
