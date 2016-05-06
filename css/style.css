@@ -1363,7 +1363,7 @@ p.shadow {
 /* Wrapper */
 
 	.wrapper {
-		padding: 5em 0 3em 0;
+		padding: 3em 0 3em 0;
 	}
 
 		.wrapper.style2 {
@@ -1388,7 +1388,6 @@ p.shadow {
 
     .wrapper.style4 {
 					text-align: center;
-          margin-top: -2em;
 		}
 
 	body.is-touch .wrapper.style3 {
