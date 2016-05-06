@@ -292,7 +292,7 @@
 
   a {
     text-decoration: none;
-    color: white;
+    color: LightGray;
   }
 
   .styled-scrollbar::-webkit-scrollbar {
