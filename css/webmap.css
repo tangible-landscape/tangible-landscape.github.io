@@ -232,10 +232,11 @@
 		text-transform: uppercase;
 	}
 
-  h3 {
-    font-size: 1.35em;
-    line-height: 1.5em;
-  }
+  h3.map {
+		font-size: 1.35em;
+		line-height: 1.5em;
+    color: white;
+	}
 
   #map {
   	position:absolute;
@@ -249,7 +250,7 @@
   #sidebar{
     position:absolute; top: 10px; right: 10px; bottom: 10px; width: 260px;
     background:#333;
-    color: #fff;
+    color: white;
     padding:20px;
     font-family: 'LatoWeb', sans-serif;
 		font-size: 16px;
@@ -280,7 +281,6 @@
     padding:0;
     margin:0;
     padding-left: 5px;
-    color: #fff;
     padding-bottom:5px;
   }
 
@@ -292,7 +292,7 @@
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: white;
   }
 
   .styled-scrollbar::-webkit-scrollbar {
