@@ -247,6 +247,11 @@
   	z-index:-99;
   }
 
+  #mapid {
+    height: 250px;
+  	z-index:-99;
+  }
+
   #sidebar{
     position:absolute; top: 10px; right: 10px; bottom: 10px; width: 260px;
     background:#333;

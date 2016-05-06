@@ -15,6 +15,12 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<link href="https://api.tiles.mapbox.com/mapbox.js/v2.4.0/mapbox.css" rel="stylesheet" />
+		<link href="css/webmap.css" rel="stylesheet" />
+		<script src="js/decode.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="https://api.tiles.mapbox.com/mapbox.js/v2.4.0/mapbox.js"></script>
 		<link rel="shortcut icon" href="./images/tl_favicon.ico" />
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -48,7 +54,7 @@
 			-->
 			</section>
 
-			<!-- One -->
+			<!-- Concept -->
 				<section id="one" class="wrapper style1">
 					<div class="container">
 						<div class="row 100%">
@@ -67,78 +73,18 @@
 					</div>
 				</section>
 
-			<!-- Two
-				<section id="two" class="wrapper style2 special">
-					<div class="container">
-						<header class="major">
-							<h2>Fusce ultrices fringilla</h2>
-							<p>Maecenas vitae tellus feugiat eleifend</p>
-						</header>
-						<div class="row 150%">
-							<div class="6u 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/system_schema.png" alt="" />
-									<h3>Lorem ipsum dolor sit amet.</h3>
-								</div>
-							</div>
-							<div class="6u$ 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/system_schema.png" alt="" />
-									<h3>Illum, maiores tempora cupid?</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				-->
+				<!-- Webmap -->
+				<div id="map"></div>
+				<div id="sidebar" class="styled-scrollbar" style="display:none">
+				  <div id="info"></div>
+				  <div id="directions">
+				    <p id="distance"></p>
+				    <p id="time"></p>
+				    <ul id="summary"></ul>
+				  </div>
+				</div>
 
-
-			<!-- Three
-				<section id="three" class="wrapper style1">
-					<div class="container">
-						<header class="major special">
-							<h2>Mauris vulputate dolor</h2>
-							<p>Feugiat sed lorem ipsum magna</p>
-						</header>
-						<div class="feature-grid">
-							<div class="feature">
-								<div class="image rounded"><img src="images/system_schema.png" alt="" /></div>
-								<div class="content">
-									<header>
-										<h4>Lorem ipsum</h4>
-										<p>Lorem ipsum dolor sit</p>
-									</header>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse tenetur accusantium porro omnis, unde mollitia totam sit nesciunt consectetur.</p>
-								</div>
-							</div>
-							<div class="feature">
-								<div class="image rounded"><img src="images/system_schema.png" alt="" /></div>
-								<div class="content">
-									<header>
-										<h4>Recusandae nemo</h4>
-										<p>Ratione maiores a, commodi</p>
-									</header>
-									<p>Animi mollitia optio culpa expedita. Dolorem alias minima culpa repellat. Dolores, fuga maiores ut obcaecati blanditiis, at aperiam doloremque.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				-->
-
-			<!-- Four
-				<section id="four" class="wrapper style3 special">
-					<div class="container">
-						<header class="major">
-							<h2>Aenean elementum ligula</h2>
-							<p>Feugiat sed lorem ipsum magna</p>
-						</header>
-						<ul class="actions">
-							<li><a href="#" class="button special big">Get in touch</a></li>
-						</ul>
-					</div>
-				</section>
-				 -->
+				<script src="js/webmap.js"></script>
 
 		<!-- Footer -->
 			<footer id="footer">
