@@ -224,6 +224,19 @@
     margin-bottom:5px;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+		color: #484848;
+		font-weight: 700;
+		line-height: 1em;
+		margin: 0 0 1em 0;
+		text-transform: uppercase;
+	}
+
+  h3 {
+    font-size: 1.35em;
+    line-height: 1.5em;
+  }
+
   #map {
   	position:absolute;
   	top:0;
@@ -239,7 +252,7 @@
     color: #fff;
     padding:20px;
     font-family: 'LatoWeb', sans-serif;
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: 300;
 		line-height: 2em;
     opacity:0.9;

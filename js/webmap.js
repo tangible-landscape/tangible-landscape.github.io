@@ -37,7 +37,7 @@ var clickHandler = function(e){
   $('#sidebar').fadeIn(400, function(){
   	var info = '';
   	info += '<div>';
-  	info += '<h2>'+ feature.properties.name + '<h2>';
+  	info += '<h3>'+ feature.properties.name + '<h3>';
     if(feature.properties.institution){
       info += '<p>' + feature.properties.institution + '</p>';
     }
