@@ -39,16 +39,16 @@ var clickHandler = function(e){
   	info += '<div>';
   	info += '<h3 class="map">'+ feature.properties.name + '</h3>';
     if(feature.properties.institution){
-      info += '<p>' + feature.properties.institution + '</p>';
+      info += '<br/><p>' + feature.properties.institution + '</p>';
     }
     if(feature.properties.department){
-      info += '<p>' + feature.properties.department + '</p>';
+      info += '<br/><p>' + feature.properties.department + '</p>';
     }
     if(feature.properties.website){
-			info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
+			info += '<br/><p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
     }
 		if(feature.properties.team){
-      info += '<p>' + feature.properties.team + '</p>';
+      info += '<br/><p>' + feature.properties.team + '</p>';
     }
     info += '</div>';
     $('#info').append(info);
