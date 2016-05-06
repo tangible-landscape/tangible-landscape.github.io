@@ -250,7 +250,7 @@
   }
 
   #sidebar{
-    position:absolute; top: 10px; right: 10px; bottom: 10px; width: 260px;
+    position:absolute; top: 10px; right: 10px; bottom: 10px; width: 250px;
     background:#333;
     color: white;
     padding:20px;
