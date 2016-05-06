@@ -10,7 +10,7 @@ var map = L.mapbox.map('map', mapId);
 
 // Set the initial view
 //map.fitWorld().zoomIn(2);
-map.setView([-78.6764, 35.7818], 4);
+map.setView([-78.6764, 35.7818], 1);
 
 
 var dataFileToAdd = 'data/tangible-landscape-systems.geojson';
