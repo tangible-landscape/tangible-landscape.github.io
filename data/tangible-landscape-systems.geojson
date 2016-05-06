@@ -3,7 +3,7 @@
     { "type": "Feature",
       "geometry": {
           "type": "Point",
-          "coordinates": [-104.99404,39.75621]
+          "coordinates": [39.75621,-104.99404]
       },
       "properties": {
           "name": "NCSU Open Source Geospatial Research and Education Laboratory",
