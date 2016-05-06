@@ -22,7 +22,7 @@
     background:#333;
     color: #fff;
     padding:20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'LatoWeb';  
     opacity:0.9;
     filter:alpha(opacity=80); /* For IE8 and earlier */
     overflow: auto
