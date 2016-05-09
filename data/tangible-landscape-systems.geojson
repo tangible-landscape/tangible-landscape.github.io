@@ -14,7 +14,7 @@
       		"marker-color": "#111",
       		"marker-symbol": "marker"
         }
-    }
+    },
     { "type": "Feature",
       "geometry": {
           "type": "Point",
