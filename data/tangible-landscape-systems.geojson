@@ -15,5 +15,18 @@
       		"marker-symbol": "marker"
         }
     }
+    { "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-77.19690, 38.75344]
+      },
+      "properties": {
+          "name": "National Geospatial-Intelligence Agency",
+      		"department": "InnoVision Directorate",
+      		"team": "Vincent Gaines",
+      		"marker-color": "#111",
+      		"marker-symbol": "marker"
+        }
+    }
   ]
 }
