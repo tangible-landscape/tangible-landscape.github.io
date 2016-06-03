@@ -25,8 +25,8 @@ featureLayer.on('ready', function(){
           "marker-symbol": "marker"
         }))
     })
-    map.fitBounds(featureLayer.getBounds().pad(0.5));
-		//map.setView(featureLayer.getBounds().pad(0.5));
+    //map.fitBounds(featureLayer.getBounds().pad(0.5));
+		map.setView(featureLayer.getBounds().pad(0.5));
 })
 
 // Sidebar
