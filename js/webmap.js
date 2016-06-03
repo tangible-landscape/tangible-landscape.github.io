@@ -9,7 +9,7 @@ L.mapbox.accessToken = accessToken;
 var map = L.mapbox.map('map', mapId);
 
 // Set the initial view
-map.fitWorld().zoomIn(2);
+//map.fitWorld().zoomIn(2);
 
 var dataFileToAdd = 'data/tangible-landscape-systems.geojson';
 
@@ -20,7 +20,7 @@ var featureLayer = L.mapbox.featureLayer();
 featureLayer.on('ready', function(){
 	this.eachLayer(function(layer){
     	layer.setIcon(L.mapbox.marker.icon({
-          "marker-color": "#333",
+          "marker-color": "#111",
           "marker-size": "large",
           "marker-symbol": "marker"
         }))

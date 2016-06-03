@@ -10,6 +10,7 @@
           "institution": "North Carolina State University",
       		"department": "Center for Geospatial Analytics",
       		"team": "Anna Petrasova, Vaclav Petras, Helena Mitasova, and Brendan Harmon",
+          "date": "November, 2013",
       		"website": "http:\/\/tangible-landscape.github.io\/",
       		"marker-color": "#111",
       		"marker-symbol": "marker"
@@ -24,9 +25,23 @@
           "name": "National Geospatial-Intelligence Agency",
       		"department": "InnoVision Directorate",
       		"team": "Vincent Gaines",
+          "date": "January, 2016",
       		"marker-color": "#111",
       		"marker-symbol": "marker"
         }
-    }
+    },
+    { "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-77.9659, 33.8463]
+      },
+      "properties": {
+          "name": "Bald Head Island Conservancy",
+      		"team": "Amy Eldredge and Poul Lindegaard",
+          "date": "May, 2016",
+      		"marker-color": "#111",
+      		"marker-symbol": "marker"
+        }
+  }
   ]
 }
