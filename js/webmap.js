@@ -25,8 +25,10 @@ featureLayer.on('ready', function(){
           "marker-symbol": "marker"
         }))
     })
-    map.fitBounds(featureLayer.getBounds());
+    map.fitBounds(featureLayer.getBounds().pad(0.5));
 })
+
+map.fitBounds(featureLayer.getBounds().pad(0.5));
 
 // Sidebar
 var clickHandler = function(e){
