@@ -9,7 +9,7 @@ L.mapbox.accessToken = accessToken;
 var map = L.mapbox.map('map', mapId);
 
 // Set the initial view
-map.fitWorld().zoomIn(3);
+map.fitWorld().zoomIn(2);
 
 var dataFileToAdd = 'data/tangible-landscape-systems.geojson';
 
@@ -25,8 +25,8 @@ featureLayer.on('ready', function(){
           "marker-symbol": "marker"
         }))
     })
-    //map.fitBounds(featureLayer.getBounds().pad(0.5));
-		map.setView(featureLayer.getBounds().pad(0.5));
+    map.fitBounds(featureLayer.getBounds().pad(0.5));
+		//map.setView(featureLayer.getBounds().pad(0.5));
 })
 
 // Sidebar
