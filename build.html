@@ -54,10 +54,12 @@
 					<p>
 						<i class="fa fa-linux fa-2x" aria-hidden="true"></i>
 						<i class="fa fa-apple fa-2x" aria-hidden="true"></i>
-						<i class="fa fa-windows fa-2x" aria-hidden="true"></i>
+						<!--<i class="fa fa-windows fa-2x" aria-hidden="true"></i>-->
 					</p>
 
 					<!-- Installation -->
+					<br/>
+					<br/>
 					<header>
 						<h3>Dependencies</h3>
 					</header>
@@ -106,6 +108,8 @@
 					<br/>
 
 					<!-- Software -->
+					<br/>
+					<br/>
 					<header>
 						<h3>Software</h3>
 					</header>
@@ -129,6 +133,8 @@
 					</div>
 
 					<!-- Hardware -->
+					<br/>
+					<br/>
 					<header>
 						<h3>Hardware</h3>
 					</header>
@@ -197,6 +203,8 @@
 					</div>
 
 					<!-- Setup -->
+					<br/>
+					<br/>
 					<header>
 						<h3>Hardware setup</h3>
 					</header>
@@ -220,6 +228,7 @@
 						</div>
 					</div>
 
+					<br/>
 					<br/>
 					<header>
 						<h4>Projector configurations</h4>
@@ -251,6 +260,8 @@
 					<br/>
 
 					<!-- Model making -->
+				</section id="model" class="wrapper">
+					<div class="container">
 					<header>
 						<h3>Model making</h3>
 					</header>
@@ -259,71 +270,86 @@
 						When you are using Tangible Landscape for object detection you can use hard, rigid models such as 3D prints.
 					</p>
 
+				</section id="difference" class="wrapper">
+					<div class="container">
 					<header>
-						<h4>Hand sculpting</h4>
+						<h4>Hand sculpting with difference analytic</h4>
 					</header>
-					<div class="container 100%">
-						<div class="row 100%">
-							<div class="6u 12u$(medium)">
-								<span class="image fit">
-									<img src="images/hand_sculpting.jpg" alt="" />
-								</span>
-							</div>
-							<div class="6u$ 12u$(medium)">
-								<p>
-									You can easily sculpt a model with polymer enriched sand using Tangible Landscape.
-									Project a digital elevation model and the derived contours onto the table.
-									Use this as a guide for sculpting.
-									You can also use Tangible Landscape to compute the difference between the scanned model that you have sculpted and the original digital elevation model.
-									Project the color coded difference (i.e. cut/fill) for a real-time guide of where to add or remove sand.
-									You can also vertically rescale and translate the scanned raster to match the original DEM using the module r.regression.line.
-								</p>
-								<!--If you are running this outside of Tangible Landscape, you can generate a raster (our hypothetical pile of sand) and compute the difference.-->
-							</div>
-						</div>
-					</div>
+						<p>
+							You can easily sculpt a model with polymer enriched sand using Tangible Landscape.
+							Project a digital elevation model and the derived contours onto the table.
+							Use this as a guide for sculpting.
+							You can also use Tangible Landscape to compute the difference between the scanned model that you have sculpted and the original digital elevation model.
+							Project the color coded difference (i.e. cut/fill) for a real-time guide of where to add or remove sand.
+							You can also vertically rescale and translate the scanned raster to match the original DEM using the module r.regression.line.
+						</p>
 
-<pre><code>import grass.script as gscript
+						<div class="wrapper style4">
+							<iframe width="853" height="480" src="https://www.youtube.com/embed/GmOqo4FCehM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+						</div>
+
+						<pre><code>import grass.script as gscript
 
 def run_difference(real_elev, scanned_elev, env, **kwargs):
-	regression_params = gscript.parse_command('r.regression.line', flags='g', mapx=scanned_elev, mapy=real_elev, env=env)
-	gscript.mapcalc('{regression} = {a} + {b} * {before}'.format(a=regression_params['a'], b=regression_params['b'],before=scanned_elev, regression='regression'), env=env)
-	gscript.mapcalc('{difference} = {regression} - {after}'.format(regression='regression', after=real_elev, difference='diff'), env=env)
-	gscript.write_command('r.colors', map='diff', rules='-', stdin="-100 black\n-20 red\n0 white\n20 blue\n100 black", env=env)
-</code></pre>
-<!--
-if __name__ == '__main__':
-	elevation = 'elev_lid792_1m'
-	sand_pile = 'sand_pile'
-	env = None
-	gscript.run_command('r.surf.fractal', output=sand_pile)
-	run_difference(real_elev=elevation, scanned_elev=sand_pile, env=env)
--->
-
-<header>
-	<h4>Digital fabrication</h4>
-</header>
-<div class="container 100%">
-	<div class="row 100%">
-		<div class="6u 12u$(medium)">
-			<span class="image fit">
-				<img src="images/3d_print_2.jpg" alt="" />
-			</span>
-		</div>
-		<div class="6u$ 12u$(medium)">
-			<p>
-				You can build precise physical models using digital fabrication technologies like computer numerically controlled (CNC) manufacturing or 3D printing.
-				You can use CNC milled and 3D printed models as molds for casting polymer enriched sand into precise yet malleable models.
-				Cast models can precisely represent complex forms that are too challenging to model by hand.
-				You can <em>reset</em> your sand model by simply by casting it again.
-			</p>
-		</div>
-	</div>
-</div>
-
-				<!-- end of main -->
+	regression_params = gscript.parse_command('r.regression.line',
+		flags='g',
+		mapx=scanned_elev,
+		mapy=real_elev,
+		env=env)
+	gscript.mapcalc('{regression} = {a} + {b} * {before}'.format(
+		a=regression_params['a'],
+		b=regression_params['b']
+		before=scanned_elev,
+		regression='regression'),
+		env=env)
+	gscript.mapcalc('{difference} = {regression} - {after}'.format(
+		regression='regression',
+		after=real_elev,
+		difference='diff'),
+		env=env)
+	gscript.write_command('r.colors',
+		map='diff',
+		rules='-',
+		stdin="-100 black\n-20 red\n0 white\n20 blue\n100 black",
+		env=env)
+						</code></pre>
+						<!--
+						if __name__ == '__main__':
+							elevation = 'elev_lid792_1m'
+							sand_pile = 'sand_pile'
+							env = None
+							gscript.run_command('r.surf.fractal', output=sand_pile)
+							run_difference(real_elev=elevation, scanned_elev=sand_pile, env=env)
+						-->
 				</div>
 			</section>
+
+	</section id="fab" class="wrapper">
+		<div class="container">
+			<header>
+				<h4>Digital fabrication</h4>
+			</header>
+			<div class="box alt">
+				<div class="row 50% uniform">
+					<div class="4u"><span class="image fit"><img src="images/3d_print_1.jpg" alt="" /></span></div>
+					<div class="4u"><span class="image fit"><img src="images/3d_print_2.jpg" alt="" /></span></div>
+					<div class="4u$"><span class="image fit"><img src="images/3d_print_3.jpg" alt="" /></span></div>
+				</div>
+				<p>
+					You can build precise physical models using digital fabrication technologies like computer numerically controlled (CNC) manufacturing or 3D printing.
+					You can use CNC milled and 3D printed models as molds for casting polymer enriched sand into precise yet malleable models.
+					Cast models can precisely represent complex forms that are too challenging to model by hand.
+					You can <em>reset</em> your sand model by simply by casting it again.
+				</p>
+			</div>
+		</div>
+	</section>
+</div>
+</section>
+
+	<!-- end of main -->
+	</div>
+</section>
 
 		<!-- Footer -->
 			<footer id="footer">

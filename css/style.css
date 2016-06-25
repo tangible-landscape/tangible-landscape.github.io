@@ -294,7 +294,8 @@ p.shadow {
 		text-align: center;;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+
+  , h2, h3, h4, h5, h6 {
 		color: #484848;
 		font-weight: 700;
 		line-height: 1em;
@@ -308,16 +309,22 @@ p.shadow {
 		}
 
     h1.shadow {
+      color: black;
+      text-transform: uppercase;
       text-shadow: 0 0 3px white, 0 0 2px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
   	}
 
 	h2 {
+    color: black;
+    text-transform: uppercase;
 		font-size: 1.75em;
 		line-height: 1.5em;
     letter-spacing: 0.1em;
 	}
 
   h2.shadow {
+    color: black;
+    text-transform: uppercase;
     text-shadow: 0 0 4px white, 0 0 3px white, 0 0 2px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
 	}
 
@@ -1372,7 +1379,7 @@ p.shadow {
 
 		.wrapper.style3 {
 			background-attachment: fixed;
-			background-image: url("../images/tangible_landscape.jpg");
+			background-image: url("../images/subsurface.jpg");
 			background-position: center center;
 			background-size: cover;
 		}
