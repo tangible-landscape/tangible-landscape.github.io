@@ -6,11 +6,20 @@ var accessToken = 'pk.eyJ1IjoiYmFoYXJtb24iLCJhIjoiY2lnaXFwbmE2MDAyaXJxbTAxZGMwcm
 
 // Map object with map id and access token
 L.mapbox.accessToken = accessToken;
-var map = L.mapbox.map('map', mapId);
+var map = L.mapbox.map('map', mapId, {scrollWheelZoom: false});
 
 // Set the initial view
 map.setView([35.7818,-78.6764], 2);
 //map.fitWorld().zoomIn(2);
+
+map.on('click', function() {
+  if (map.scrollWheelZoom.enabled()) {
+    map.scrollWheelZoom.disable();
+    }
+    else {
+    map.scrollWheelZoom.enable();
+    }
+  });
 
 var dataFileToAdd = 'data/tangible-landscape-systems.geojson';
 
