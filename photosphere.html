@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Tangible Landscape</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
+	<body>
+
+				<div id="photosphere"></div>
+
+				<!-- PhotoSphereViewer -->
+				<link rel="stylesheet" href="js/photo-sphere-viewer.min.css">
+				<script src="js/three.min.js"></script>
+				<script src="js/D.min.js"></script>
+				<script src="js/uevent.min.js"></script>
+				<script src="js/doT.min.js"></script>
+				<script src="js/photo-sphere-viewer.min.js"></script>
+				<script>
+				  var viewer = PhotoSphereViewer({
+						panorama: 'images/360/geoviz_1.jpg',
+				    container: 'photosphere',
+				    caption: 'Geovisualization Lab, Center for Geospatial Analytics, NCSU',
+				    navbar: 'autorotate zoom download caption fullscreen',
+				    size: {
+				      height: 300
+				    }
+					});
+					viewer.toggleFullscreen()
+				</script>
+
+				<!--
+				<script>
+				  var PSV = new PhotoSphereViewer({
+				    panorama: 'images/360/geoviz_1.jpg',
+				    container: 'photosphere',
+				    caption: 'Geovisualization Lab <b>&copy; Tangible Landscape Team</b>',
+				    loading_img: 'http://photo-sphere-viewer.js.org/assets/photosphere-logo.gif',
+				    navbar: 'autorotate zoom download caption fullscreen',
+				    default_fov: 70,
+				    mousewheel: false,
+				    size: {
+				      height: 500
+				    }
+				  });
+				</script>
+			-->
+
+<!--
+<img src="images/360/geoviz_1.jpg">
+-->
+
+<!--
+<a data-flickr-embed="true" data-vr="true"  href="https://www.flickr.com/photos/hungryghostillustrated/30109717046/in/dateposted-public/" title="Geovisualization Lab, Center for Geospatial Analytics, NCSU"><img src="https://c7.staticflickr.com/6/5223/30109717046_179832f6ab_k.jpg" width="2048" height="1024" alt="Geovisualization Lab, Center for Geospatial Analytics, NCSU"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+-->
+
+
+	</body>
+</html>
