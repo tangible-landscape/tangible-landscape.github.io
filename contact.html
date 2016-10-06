@@ -21,24 +21,6 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
-		<!-- PhotoSphereViewer -->
-		<link rel="stylesheet" href="js/photo-sphere-viewer.min.css">
-		<script src="js/three.min.js"></script>
-		<script src="js/D.min.js"></script>
-		<script src="js/uevent.min.js"></script>
-		<script src="js/doT.min.js"></script>
-		<script src="js/photo-sphere-viewer.min.js"></script>
-		<script>
-			var viewer = PhotoSphereViewer({
-				panorama: 'images/360/geoviz_1.jpg',
-				container: 'photosphere',
-				caption: 'Geovisualization Lab, Center for Geospatial Analytics, NCSU',
-				navbar: 'autorotate zoom download caption fullscreen',
-				size: {
-					height: 300
-				}
-			});
-		</script>
 	</head>
 	<body>
 
@@ -123,6 +105,25 @@
 				<p class="center">Visit us in the Geovisualization Lab in North Carolina State University's <a href="https://cnr.ncsu.edu/geospatial/">Center for Geospatial Analytics</a></p>
 
 				<div id="photosphere"></div>
+
+				<!-- PhotoSphereViewer -->
+				<link rel="stylesheet" href="js/photo-sphere-viewer.min.css">
+				<script src="js/three.min.js"></script>
+				<script src="js/D.min.js"></script>
+				<script src="js/uevent.min.js"></script>
+				<script src="js/doT.min.js"></script>
+				<script src="js/photo-sphere-viewer.min.js"></script>
+				<script>
+					var viewer = PhotoSphereViewer({
+						panorama: 'images/360/geoviz_1.jpg',
+						container: 'photosphere',
+						caption: 'Geovisualization Lab, Center for Geospatial Analytics, NCSU',
+						navbar: 'autorotate zoom download caption fullscreen',
+						size: {
+							height: 300
+						}
+					});
+				</script>
 
 		<!-- Footer -->
 			<footer id="footer">
