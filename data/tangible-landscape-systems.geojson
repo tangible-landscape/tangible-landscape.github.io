@@ -10,6 +10,7 @@
           "institution": "North Carolina State University",
       		"department": "Center for Geospatial Analytics",
       		"team": "Anna Petrasova, Vaclav Petras, Helena Mitasova, and Brendan Harmon",
+          "location": "Raleigh, North Carolina",
           "date": "November, 2013",
       		"website": "http:\/\/tangible-landscape.github.io\/",
       		"marker-color": "#111",
@@ -25,6 +26,7 @@
           "name": "National Geospatial-Intelligence Agency",
       		"department": "InnoVision Directorate",
       		"team": "Vincent Gaines",
+          "location": "Fort Belvoir, Virginia",
           "date": "January, 2016",
       		"marker-color": "#111",
       		"marker-symbol": "marker"
@@ -38,10 +40,28 @@
       "properties": {
           "name": "Bald Head Island Conservancy",
       		"team": "Amy Eldredge and Poul Lindegaard",
+          "location": "Bald Head Island, North Carolina",
           "date": "May, 2016",
       		"marker-color": "#111",
       		"marker-symbol": "marker"
         }
-  }
+      },
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-26.1775, 28.0566]
+        },
+        "properties": {
+            "name": "St John's College with Kartoza",
+            "institution": "St John's College",
+        		"department": "Geography",
+        		"team": "Bridget Fleming, Sam Jones, Matthew Jones, Peter Henning, and Gavin Fleming",
+            "location": "Johannesburg, South Africa",
+            "date": "October 8, 2016",
+            "website": "http:\/\/stjohnscollege.co.za\/ and http:\/\/kartoza.com\/",
+        		"marker-color": "#111",
+        		"marker-symbol": "marker"
+          }
+      }
   ]
 }
