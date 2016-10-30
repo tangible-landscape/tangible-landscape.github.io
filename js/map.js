@@ -12,6 +12,9 @@ var map = L.mapbox.map('map', mapId, {scrollWheelZoom: false});
 map.setView([35.7818,-78.6764], 2);
 //map.fitWorld().zoomIn(2);
 
+//map.on('resize', function(e) {
+//    map.fitWorld({reset: true}).zoomIn();
+
 map.on('click', function() {
   if (map.scrollWheelZoom.enabled()) {
     map.scrollWheelZoom.disable();
