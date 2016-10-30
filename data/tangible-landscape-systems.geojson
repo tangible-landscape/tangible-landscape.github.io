@@ -62,6 +62,22 @@
         		"marker-color": "#111",
         		"marker-symbol": "marker"
           }
+      },
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [17.260359, 49.595642]
+        },
+        "properties": {
+            "name": "Palacký University Olomouc",
+            "department": "Geoinformatics",
+            "team": "Vit Vozenilek et al.",
+            "location": "Olomouc, Czech Republic",
+            "date": "October, 2016",
+            "website": "http:\/\/www.geoinformatics.upol.cz\/",
+            "marker-color": "#111",
+            "marker-symbol": "marker"
+          }
       }
   ]
 }
