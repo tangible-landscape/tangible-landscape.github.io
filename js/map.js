@@ -10,7 +10,7 @@ var map = L.mapbox.map('map', mapId, {scrollWheelZoom: false});
 
 // Set the initial view
 map.setView([35.7818,-78.6764], 3);
-//map.fitWorld().zoomIn(3);
+map.fitWorld().zoomIn(3);
 
 map.on('click', function() {
   if (map.scrollWheelZoom.enabled()) {
