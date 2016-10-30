@@ -9,7 +9,7 @@ L.mapbox.accessToken = accessToken;
 var map = L.mapbox.map('map', mapId, {scrollWheelZoom: false});
 
 // Set the initial view
-map.setView([35.7818,-78.6764], 1);
+map.setView([35.7818,-78.6764]);
 map.fitWorld().zoomIn();
 
 map.on('click', function() {
