@@ -9,7 +9,9 @@ L.mapbox.accessToken = accessToken;
 var map = L.mapbox.map('map', mapId);
 
 // Set the initial view
-map.fitWorld().zoomIn(2);
+map.fitWorld().zoomIn(1);
+map.on('resize', function(e) {
+    map.fitWorld({reset: true}).zoomIn();
 
 var dataFileToAdd = 'data/tangible-landscape-systems.geojson';
 
