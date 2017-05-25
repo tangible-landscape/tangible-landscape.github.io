@@ -66,6 +66,23 @@
       { "type": "Feature",
         "geometry": {
             "type": "Point",
+            "coordinates": [10.7078504, 59.9295957]
+        },
+        "properties": {
+            "name": "FUDT (Fysisk brukergrensesnitt for dynamisk utforming av digitale Terrengmodeller)",
+            "institution": "The Norwegian Water Resources and Energy Directorate (NVE)",
+        		"department": "Hydrological Department, GIS Section",
+        		"team": "Ortega Mora Rengifo Zenon",
+            "location": "Oslo, Norway",
+            "date": "May, 2017",
+            "website": "https:\/\/www.nve.no\/english\/",
+        		"marker-color": "#111",
+        		"marker-symbol": "marker"
+          }
+      },
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
             "coordinates": [17.260359, 49.595642]
         },
         "properties": {
