@@ -69,8 +69,7 @@
             "coordinates": [10.7078504, 59.9295957]
         },
         "properties": {
-            "name": "FUDT (Fysisk brukergrensesnitt for dynamisk utforming av digitale Terrengmodeller)",
-            "institution": "The Norwegian Water Resources and Energy Directorate (NVE)",
+            "name": "The Norwegian Water Resources and Energy Directorate (NVE)",
         		"department": "Hydrological Department, GIS Section",
         		"team": "Ortega Mora Rengifo Zenon",
             "location": "Oslo, Norway",
