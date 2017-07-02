@@ -1,0 +1,37 @@
+{ "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-77.042448, 38.898913]
+      },
+      "properties": {
+          "title": "Tangibly Smart: an interactive watershed in your hands",
+          "event": "Watershed Days 2017",
+      		"host": "World Bank Group",
+      		"authors": "Brendan Harmon, Payam Tabrizian, Anna Petrasova, Vaclav Petras, and Helena Mitasova",
+          "location": "Washington DC",
+          "date": "June 28, 2017",
+      		"website": "https:\/\/ncsu-geoforall-lab.github.io\/tangible-landscape-talk\/worldbank2017#\/",
+      		"marker-color": "#303030",
+      		"marker-symbol": "marker"
+        }
+    },
+    { "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [-78.641387, 35.773491]
+      },
+      "properties": {
+          "title": "Tangible Landscape",
+          "event": "FOSS4G North America 2016",
+      		"authors": "Brendan Harmon, Anna Petrasova, Vaclav Petras, Helena Mitasova, and Ross Meentemeyer",
+          "location": "Raleigh, NC",
+          "date": "May 2-7, 2016",
+      		"website": "https:\/\/baharmon.github.io\/foss4g-na-2016\/#\/",
+      		"marker-color": "#303030",
+      		"marker-symbol": "marker"
+        }
+    }
+  ]
+}
