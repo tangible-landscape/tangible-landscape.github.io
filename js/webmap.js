@@ -41,12 +41,27 @@ featureLayerSystems.on('ready', function(){
 featureLayerDemos.on('ready', function(){
 	this.eachLayer(function(layer){
     	layer.setIcon(L.mapbox.marker.icon({
-          "marker-color": "#fff",
+          "marker-color": "#888",
           "marker-size": "medium",
           "marker-symbol": "marker"
         }))
     })
 })
+
+// // Legend
+// var legend = L.control({position: 'topright'});
+//
+// legend.onAdd = function (map) {
+//
+// 	var div = L.DomUtil.create('div', 'legend');
+//
+// 	div.innerHTML += 'Systems';
+// 	div.innerHTML += 'Demos';
+//
+// 	return div;
+// };
+//
+// legend.addTo(map);
 
 // Sidebar
 var clickHandler = function(e){

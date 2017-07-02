@@ -50,7 +50,7 @@ featureLayerSystems.on('ready', function(){
 featureLayerDemos.on('ready', function(){
 	this.eachLayer(function(layer){
     	layer.setIcon(L.mapbox.marker.icon({
-          "marker-color": "#fff",
+          "marker-color": "#888",
           "marker-size": "medium",
           "marker-symbol": "marker"
         }))
