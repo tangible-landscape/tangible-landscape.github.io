@@ -39,8 +39,8 @@ var featureLayerDemos = L.mapbox.featureLayer();
 featureLayerSystems.on('ready', function(){
 	this.eachLayer(function(layer){
     	layer.setIcon(L.mapbox.marker.icon({
-          "marker-color": "#333",
-          "marker-size": "large",
+          "marker-color": "#111",
+          "marker-size": "medium",
           "marker-symbol": "marker"
         }))
     })
@@ -50,7 +50,7 @@ featureLayerSystems.on('ready', function(){
 featureLayerDemos.on('ready', function(){
 	this.eachLayer(function(layer){
     	layer.setIcon(L.mapbox.marker.icon({
-          "marker-color": "#303030",
+          "marker-color": "#666",
           "marker-size": "medium",
           "marker-symbol": "marker"
         }))
