@@ -24,13 +24,19 @@ map.on('click', function() {
     }
   });
 
-var dataFileToAdd = 'data/tangible-landscape-systems.geojson';
+var systems = 'data/tangible-landscape-systems.geojson';
 
-var featureLayer = L.mapbox.featureLayer();
-	featureLayer.loadURL(dataFileToAdd);
-	featureLayer.addTo(map);
+var demos = 'data/tangible-landscape-demos.geojson';
 
-featureLayer.on('ready', function(){
+var featureLayerSystems = L.mapbox.featureLayer();
+	featureLayerSystems.loadURL(systems);
+	featureLayerSystems.addTo(map);
+
+  var featureLayerDemos = L.mapbox.featureLayer();
+  	featureLayerDemos.loadURL(demos);
+  	featureLayerDemos.addTo(map);
+
+featureLayerSystems.on('ready', function(){
 	this.eachLayer(function(layer){
     	layer.setIcon(L.mapbox.marker.icon({
           "marker-color": "#333",
@@ -38,7 +44,18 @@ featureLayer.on('ready', function(){
           "marker-symbol": "marker"
         }))
     })
-    map.fitBounds(featureLayer.getBounds());
+    map.fitBounds(featureLayerSystems.getBounds());
+})
+
+featureLayerDemos.on('ready', function(){
+	this.eachLayer(function(layer){
+    	layer.setIcon(L.mapbox.marker.icon({
+          "marker-color": "#303030",
+          "marker-size": "medium",
+          "marker-symbol": "marker"
+        }))
+    })
+    // map.fitBounds(featureLayerDemos.getBounds());
 })
 
 // Sidebar
@@ -90,7 +107,14 @@ var clickHandler = function(e){
 }
 
 // On click
-featureLayer.on('ready', function(){
+featureLayerSystems.on('ready', function(){
+  this.eachLayer(function(layer){
+  	layer.on('click', clickHandler);
+  })
+})
+
+// On click
+featureLayerDemos.on('ready', function(){
   this.eachLayer(function(layer){
   	layer.on('click', clickHandler);
   })

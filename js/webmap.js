@@ -42,12 +42,33 @@ var clickHandler = function(e){
   $('#sidebar').fadeIn(400, function(){
   	var info = '';
   	info += '<div>';
-  	info += '<h3 class="map">'+ feature.properties.name + '</h3>';
+		// info += '<h3 class="map">'+ feature.properties.name + '</h3>';
+    if(feature.properties.name){
+      info += '<h3 class="map">' + feature.properties.name + '</h3>';
+    }
+    if(feature.properties.title){
+      info += '<h3 class="map">' + feature.properties.title + '</h3>';
+    }
+    if(feature.properties.event){
+      info += '<p>' + feature.properties.event + '</p>';
+    }
     if(feature.properties.institution){
       info += '<p>' + feature.properties.institution + '</p>';
     }
     if(feature.properties.department){
       info += '<p>' + feature.properties.department + '</p>';
+    }
+    if(feature.properties.host){
+      info += '<p>' + feature.properties.host + '</p>';
+    }
+    if(feature.properties.authors){
+      info += '<p>' + feature.properties.authors + '</p>';
+    }
+    if(feature.properties.location){
+      info += '<p>' + feature.properties.location + '</p>';
+    }
+    if(feature.properties.date){
+      info += '<p>' + feature.properties.date + '</p>';
     }
     if(feature.properties.website){
 			info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
