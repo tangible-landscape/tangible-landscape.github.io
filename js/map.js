@@ -32,9 +32,9 @@ var featureLayerSystems = L.mapbox.featureLayer();
 	featureLayerSystems.loadURL(systems);
 	featureLayerSystems.addTo(map);
 
-  var featureLayerDemos = L.mapbox.featureLayer();
-  	featureLayerDemos.loadURL(demos);
-  	featureLayerDemos.addTo(map);
+var featureLayerDemos = L.mapbox.featureLayer();
+	featureLayerDemos.loadURL(demos);
+	featureLayerDemos.addTo(map);
 
 featureLayerSystems.on('ready', function(){
 	this.eachLayer(function(layer){
