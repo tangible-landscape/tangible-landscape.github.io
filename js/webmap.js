@@ -48,20 +48,20 @@ featureLayerDemos.on('ready', function(){
     })
 })
 
-// // Legend
-// var legend = L.control({position: 'topright'});
-//
-// legend.onAdd = function (map) {
-//
-// 	var div = L.DomUtil.create('div', 'legend');
-//
-// 	div.innerHTML += 'Systems';
-// 	div.innerHTML += 'Demos';
-//
-// 	return div;
-// };
-//
-// legend.addTo(map);
+// Legend
+var legend = L.control({position: 'topright'});
+
+legend.onAdd = function (map) {
+
+	var div = L.DomUtil.create('div', 'legend');
+
+	div.innerHTML += 'Systems';
+	div.innerHTML += 'Demos';
+
+	return div;
+};
+
+legend.addTo(map);
 
 // Sidebar
 var clickHandler = function(e){
