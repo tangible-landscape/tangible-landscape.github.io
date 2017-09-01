@@ -82,7 +82,7 @@
       { "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-32.062280, -60.643923]
+            "coordinates": [-60.643923, -32.062280]
         },
         "properties": {
             "name": "Centro Regional de Geomática",
