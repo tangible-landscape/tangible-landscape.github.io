@@ -6,7 +6,7 @@
           "coordinates": [-78.6764, 35.7818]
       },
       "properties": {
-          "name": "NCSU Open Source Geospatial Research and Education Laboratory",
+          "name": "NCSU GeoForAll Laboratory",
           "institution": "North Carolina State University",
       		"department": "Center for Geospatial Analytics",
       		"team": "Anna Petrasova, Vaclav Petras, Helena Mitasova, and Brendan Harmon",
@@ -75,6 +75,23 @@
             "location": "Oslo, Norway",
             "date": "May, 2017",
             "website": "https:\/\/www.nve.no\/english\/",
+        		"marker-color": "#111",
+        		"marker-symbol": "marker"
+          }
+      },
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-32.062280, -60.643923]
+        },
+        "properties": {
+            "name": "Centro Regional de Geomática",
+            "institution": "Universidad Autónoma de Entre Ríos",
+        		"department": "Facultad de Ciencia y Tecnología",
+        		"team": "Fernando Tentor, Walter Sione, Pablo Aceñolaza, Pamela Zamboni, Francisco Maldonado, Francisco Viva Mayer, Estela Rodriguez, Ricardo Castro Diaz, and Fernando Bourdignon",
+            "location": "Entre Ríos, Argentina",
+            "date": "August 31, 2017",
+        		"website": "https:\/\/ceregeo.org\/",
         		"marker-color": "#111",
         		"marker-symbol": "marker"
           }
