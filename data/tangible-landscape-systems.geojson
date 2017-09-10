@@ -111,6 +111,22 @@
             "marker-color": "#111",
             "marker-symbol": "marker"
           }
+      },
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-83.37508, 33.94859]
+        },
+        "properties": {
+            "name": "Center for Geospatial Research (CGR)",
+            "department": "Department of Geography, The University of Georgia",
+            "team": "Dr. Sergio Bernardes",
+            "location": "Athens, Georgia, USA",
+            "date": "September, 2017",
+            "website": "http:\/\/www.crms.uga.edu\/wordpress",
+            "marker-color": "#111",
+            "marker-symbol": "marker"
+          }
       }
   ]
 }
