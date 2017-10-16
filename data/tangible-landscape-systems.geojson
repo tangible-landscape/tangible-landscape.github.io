@@ -127,6 +127,22 @@
             "marker-color": "#111",
             "marker-symbol": "marker"
           }
+      },
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [21.248518, 48.728684]
+        },
+        "properties": {
+            "name": " Institute of Geography",
+            "department": "Department of Science, Pavol Jozef Šafárik Univeristy in Košice (IGE)",
+            "team": "Dr. Michal Gallay",
+            "location": "Košice, Slovakia",
+            "date": "October, 2017",
+            "website": "http:\/\/geografia.science.upjs.sk",
+            "marker-color": "#111",
+            "marker-symbol": "marker"
+          }
       }
   ]
 }
