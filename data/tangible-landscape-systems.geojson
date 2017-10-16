@@ -131,6 +131,23 @@
       { "type": "Feature",
         "geometry": {
             "type": "Point",
+            "coordinates": [112.614839, -7.953736]
+        },
+        "properties": {
+            "name": "Geoinformatics Research Group",
+            "department": "Faculty of Computer Science",
+            "institution": "University Of Brawijaya",
+            "team": "Cendi Tito Rahman, Adhi Isti Febriandhika, Fatwa Ramdani, and M.Chandra Saputra",
+            "location": "Malang, East Java, Indonesia",
+            "date": "October, 2017",
+            "website": "http:\/\/gis.filkom.ub.ac.id\/",
+            "marker-color": "#111",
+            "marker-symbol": "marker"
+          }
+      },
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
             "coordinates": [21.248518, 48.728684]
         },
         "properties": {
