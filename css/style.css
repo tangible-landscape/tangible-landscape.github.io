@@ -1222,6 +1222,19 @@ p.shadow {
 			top: 0;
 		}
 
+    #header h1.shadow {
+      color: black;
+			font-weight: 400;
+			height: inherit;
+			left: 1.25em;
+			line-height: inherit;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+      text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+  	}
+
 		#header nav {
 			height: inherit;
 			line-height: inherit;
@@ -1229,6 +1242,16 @@ p.shadow {
 			right: 1.25em;
 			top: 0;
 			vertical-align: middle;
+		}
+
+    #header nav.shadow {
+			height: inherit;
+			line-height: inherit;
+			position: absolute;
+			right: 1.25em;
+			top: 0;
+			vertical-align: middle;
+      text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
 		}
 
 			#header nav > ul {
@@ -1330,6 +1353,7 @@ p.shadow {
 		padding: 16em 0 13em 0;
 		background-attachment: fixed;
 		background-image: url("../images/tl_planting_3.jpg");
+    /* 		background-image: url("../images/tl_planting_3_green.jpg"); */
 		background-position: center bottom;
 		background-size: cover;
 		line-height: 1.75;
@@ -1455,3 +1479,20 @@ p.shadow {
 					margin-left: 0;
 					padding-left: 0;
 				}
+
+/* Video Containers */
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}

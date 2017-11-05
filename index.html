@@ -32,8 +32,8 @@
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<h1><strong><a href="https://geospatial.ncsu.edu/osgeorel">NCSU</strong><span style="color: #222"> GeoForAll Lab</span></a></h1>
-				<nav id="nav">
+				<h1 class="shadow"><strong><a href="https://geospatial.ncsu.edu/osgeorel">NCSU</strong><span style="color: #222"> GeoForAll Lab</span></a></h1>
+				<nav id="nav" class="shadow">
 					<ul>
 						<li><a href="index.html#concept">Concept</a></li>
 						<li><a href="applications.html">Applications</a></li>
@@ -47,45 +47,97 @@
 		<!-- Banner -->
 			<section id="banner">
 				<h2 class="shadow">Tangible Landscape</h2>
-				<p>an open source tangible interface for GRASS GIS<br/><br/><img height="150px" src="images/logo_black.png"></p>
+				<p class="shadow">a tangible interface for geospatial modeling<br/><br/></p>
+				<!--<img height="150px" src="images/logo_black.png">-->
 				<!--<ul class="actions">
 					<li><a href="#" class="button special big">Get Started</a></li>
 				</ul>
 			-->
 			</section>
 
-			<!-- Concept -->
-				<section id="concept" class="wrapper style1">
-					<div class="container">
-						<div class="row 100%">
-							<div class="6u 12u$(medium)">
-								<div class="image fit captioned">
-									<img src="images/system_schema.png" alt="" />
+		<!-- Concept -->
+			<section id="concept" class="wrapper style1">
+				<div class="container">
+					<div class="row 100%">
+						<div class="4u">
+							<div class="image fit captioned">
+								<img src="images/rendered_diagram_2.png" alt="" />
+							</div>
+						</div>
+						<div class="8u">
+
+							<h2>Concept</h2>
+							<p>
+							With Tangible Landscape you can hold
+							a model of a Landscape
+							in your hands, feeling the shape of the earth
+							and sculpting its topography.
+							When you sculpt new landforms
+							you change the flow of simulated digital water,
+							creating new streams and lakes.
+							You can plant forests by simply placing
+							pieces of colored felt
+							and immediately see 3D renderings
+							with the new trees.
+
+							Tangible Landscape is
+							an open source tangible interface
+							powered by GRASS GIS and Blender.
+							Tangible Landscape couples
+							a physical model with a digital model
+							of a landscape
+							so that you can naturally feel, reshape, and interact
+							with the landscape.
+							This makes geographic information systems (GIS)
+							and 3D modeling far more intuitive and accessible
+							for beginners, empowers geospatial experts,
+							and creates new exciting opportunities for developers -
+							like gaming with GIS.</p>
+
+							<h2 style="margin-top: 0.5em">How-it-works</h2>
+							<p>A real-time feedback cycle of interaction, 3D scanning, point cloud processing, geospatial computation and projection, and 3D modeling and 3D rendering.</p>
+
+							<h2 style="margin-top: 0.5em">Features</h2>
+							<p>
+								<!--
+								Collaborative <b>|</b> Tangible freeform modeling <b>|</b> Object detection &amp; classification <b>|</b> Real-time geospatial analytics <b>|</b> Real-time 3D rendering <b>|</b> Time series <b>|</b> Virtual Reality
+								-->
+
+								<ul>
+									<li>Collaborative</li>
+									<li>Tangible freeform modeling</li>
+									<li>Object detection &amp; classification</li>
+									<li>Real-time geospatial analytics</li>
+									<li>Real-time 3D rendering</li>
+									<li>Time series</li>
+									<li>Virtual Reality</li>
+								</ul>
+							</p>
+
+							<!-- Video
+								<div class="video-container">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/Cd3cCQTGer4?rel=0" frameborder="0" allowfullscreen></iframe>
 								</div>
-							</div>
-							<div class="6u$ 12u$(medium)">
-								<h2>Concept</h2>
-								<p>Imagine being able to hold a GIS in your hands, feeling the shape of the earth, sculpting its topography, and directing the flow of water. We present Tangible Landscape, an open source tangible interface powered by GRASS GIS. Tangible Landscape physically, interactively manifests geospatial data so that you can naturally feel it, see it, and shape it. This makes GIS far more intuitive and accessible for beginners, empowers geospatial experts, and creates new exciting opportunities for developers - like gaming with GIS.</p>
-								<h2 style="margin-top: 0.5em">How-it-works</h2>
-								<p>A near real-time feedback cycle of interaction, 3D scanning, point cloud processing, geospatial computation, and projection.</p>
-							</div>
+							-->
+
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<!-- Webmap -->
-				<section class="wrapper style4">
-					<h2><a href="map.html">Tangible Landscape groups</a></h2>
-					<div>
-						<div id="map"></div> <!--class="container"-->
-						<div id="sidebar" class="styled-scrollbar" style="display:none">
-						  <div id="info"></div>
-						</div>
+		<!-- Webmap -->
+			<section class="wrapper style4">
+				<h2><a href="map.html">Tangible Landscape groups</a></h2>
+				<div>
+					<div id="map"></div> <!--class="container"-->
+					<div id="sidebar" class="styled-scrollbar" style="display:none">
+					  <div id="info"></div>
 					</div>
-					<p><a href="map.html">Full window map of Tangible Landscape groups</a></p>
+				</div>
+				<p><a href="map.html">Full window map of Tangible Landscape groups</a></p>
 
-					<script src="js/map.js"></script>
-				</section
+				<script src="js/map.js"></script>
+			</section>
 
 		<!-- Footer -->
 			<footer id="footer">
