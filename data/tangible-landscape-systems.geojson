@@ -3,14 +3,29 @@
     { "type": "Feature",
       "geometry": {
           "type": "Point",
+          "coordinates": [-91.180909, 30.411775]
+      },
+      "properties": {
+          "name": "Robert Reich School of Landscape Architecture",
+          "institution": "Louisiana State University",
+          "team": "Brendan Harmon",
+          "location": "Baton Rouge, Louisiana, USA",
+          "date": "December, 2017",
+          "marker-color": "#111",
+          "marker-symbol": "marker"
+        }
+    },
+    { "type": "Feature",
+      "geometry": {
+          "type": "Point",
           "coordinates": [-78.6764, 35.7818]
       },
       "properties": {
           "name": "NCSU GeoForAll Laboratory",
           "institution": "North Carolina State University",
       		"department": "Center for Geospatial Analytics",
-      		"team": "Anna Petrasova, Vaclav Petras, Helena Mitasova, and Brendan Harmon",
-          "location": "Raleigh, North Carolina",
+      		"team": "Anna Petrasova, Vaclav Petras, Payam Tabrizian, Brendan Harmon, and Helena Mitasova",
+          "location": "Raleigh, North Carolina, USA",
           "date": "November, 2013",
       		"website": "http:\/\/tangible-landscape.github.io\/",
       		"marker-color": "#111",
@@ -26,7 +41,7 @@
           "name": "National Geospatial-Intelligence Agency",
       		"department": "InnoVision Directorate",
       		"team": "Vincent Gaines",
-          "location": "Fort Belvoir, Virginia",
+          "location": "Fort Belvoir, Virginia, USA",
           "date": "January, 2016",
       		"marker-color": "#111",
       		"marker-symbol": "marker"
@@ -40,7 +55,7 @@
       "properties": {
           "name": "Bald Head Island Conservancy",
       		"team": "Amy Eldredge and Poul Lindegaard",
-          "location": "Bald Head Island, North Carolina",
+          "location": "Bald Head Island, North Carolina, USA",
           "date": "May, 2016",
       		"marker-color": "#111",
       		"marker-symbol": "marker"
