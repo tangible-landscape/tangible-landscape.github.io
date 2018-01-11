@@ -58,6 +58,16 @@ featureLayerDemos.on('ready', function(){
     // map.fitBounds(featureLayerDemos.getBounds());
 })
 
+
+
+// Cluster markers
+var markers = L.markerClusterGroup();
+markers.addLayer(featureLayerSystems);
+map.addLayer(markers);
+
+
+
+
 // Sidebar
 var clickHandler = function(e){
 	$('#info').empty();
