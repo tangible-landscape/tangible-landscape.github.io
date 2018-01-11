@@ -146,6 +146,21 @@
       { "type": "Feature",
         "geometry": {
             "type": "Point",
+            "coordinates": [28.034088, -26.195246]
+        },
+        "properties": {
+            "name": "Macroscopia",
+            "team": "Simon Chambert",
+            "location": "Johannesburg, South Africa",
+            "date": "August, 2017",
+            "website": "http:\/\/www.macroscopia.com\/",
+            "marker-color": "#111",
+            "marker-symbol": "marker"
+          }
+      },
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
             "coordinates": [112.614839, -7.953736]
         },
         "properties": {
