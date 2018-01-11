@@ -48,6 +48,29 @@ featureLayerDemos.on('ready', function(){
     })
 })
 
+
+
+// Cluster markers
+var markers = new L.MarkerClusterGroup();
+
+for (var i = 0; i < addressPoints.length; i++) {
+		var a = addressPoints[i];
+		var title = a[2];
+		var marker = L.marker(new L.LatLng(a[0], a[1]), {
+				icon: L.mapbox.marker.icon({'marker-symbol': 'post', 'marker-color': '0044FF'}),
+				title: title
+		});
+		marker.bindPopup(title);
+		markers.addLayer(marker);
+}
+
+map.addLayer(markers);
+
+
+
+
+
+
 // Legend
 var legend = L.control({position: 'topright'});
 
