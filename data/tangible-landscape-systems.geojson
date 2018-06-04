@@ -176,6 +176,21 @@
           }
       },
       { "type": "Feature",
+      "geometry": {
+      "type": "Point",
+      "coordinates": [-77.8619, 40.8033]
+      },
+      "properties": {
+      "name": "USDA-ARS Pasture Systems and Watershed Management Research Unit",
+      "institution": "US Department of Agriculture",
+      "department": "Agricultural Research Service",
+      "team": "Sarah Goslee and Jeff Gonet",
+      "website": "https:\/\/www.ars.usda.gov\/northeast-area\/up-pa\/pswmru\/",
+      "marker-color": "#111",
+      "marker-symbol": "marker"
+      }
+      },
+      { "type": "Feature",
         "geometry": {
             "type": "Point",
             "coordinates": [21.248518, 48.728684]
