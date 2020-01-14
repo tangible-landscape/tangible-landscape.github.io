@@ -205,6 +205,21 @@
             "marker-color": "#111",
             "marker-symbol": "marker"
           }
+      },
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [114.421366, 30.458577]
+        },
+        "properties": {
+            "name": "Wuhan Tangible GIS Lab",
+            "department": "Hydrogeology and Environmental Geology",
+            "team": "Wang Jietao",
+            "location": "Wuhan, China",
+            "date": "January, 2020",
+            "marker-color": "#111",
+            "marker-symbol": "marker"
+          }
       }
   ]
 }
