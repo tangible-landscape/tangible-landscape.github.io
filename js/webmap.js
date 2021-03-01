@@ -4,8 +4,7 @@ var mapId = 'baharmon.019h4lm1';
 // Mapbox access token
 var accessToken = 'pk.eyJ1IjoiYmFoYXJtb24iLCJhIjoiY2lnaXFwbmE2MDAyaXJxbTAxZGMwcmZneCJ9.M-KRxEOrjKct0rl8hxHJug';
 
-
-// NEW
+// Map
 var map = L.map('map').setView([35.7818,-78.6764], 3);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -14,21 +13,8 @@ maxZoom: 18,
 id: 'mapbox/streets-v11',
 tileSize: 512,
 zoomOffset: -1,
-accessToken: 'pk.eyJ1IjoiYmFoYXJtb24iLCJhIjoiY2tnYnF1eW14MGpqejJ0cXFjbnI2c3k1biJ9.fFlwJv9wUEpKPAtSopLIyw'
+accessToken: accessToken
 }).addTo(map);
-
-
-
-// // Map object with map id and access token
-// L.mapbox.accessToken = accessToken;
-// var map = L.mapbox.map('map', mapId);
-//
-// // Set the initial view
-// map.setView([35.7818,-78.6764], 3);
-// //map.fitWorld().zoomIn(2);
-// // map.fitWorld().zoomIn(1);
-// // map.on('resize', function(e) {
-// //     map.fitWorld({reset: true}).zoomIn();
 
 var systems = 'data/tangible-landscape-systems.geojson';
 
@@ -62,11 +48,6 @@ featureLayerDemos.on('ready', function(){
         }))
     })
 })
-
-// // Cluster markers
-// var markers = L.markerClusterGroup();
-// markers.addLayer(featureLayerSystems);
-// map.addLayer(markers);
 
 // Legend
 var legend = L.control({position: 'topright'});
@@ -144,7 +125,6 @@ featureLayerDemos.on('ready', function(){
   	layer.on('click', clickHandler);
   })
 })
-
 
 map.on('click',function(){
 	$('#sidebar').fadeOut(200);
