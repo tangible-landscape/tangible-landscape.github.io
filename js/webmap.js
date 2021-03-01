@@ -7,47 +7,86 @@ var accessToken = 'pk.eyJ1IjoiYmFoYXJtb24iLCJhIjoiY2lnaXFwbmE2MDAyaXJxbTAxZGMwcm
 // Map
 var map = L.map('map').setView([35.7818,-78.6764], 3);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-maxZoom: 18,
-id: 'mapbox/streets-v11',
-tileSize: 512,
-zoomOffset: -1,
-accessToken: accessToken
-}).addTo(map);
+// L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+// attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+// maxZoom: 18,
+// id: 'mapbox/streets-v11',
+// tileSize: 512,
+// zoomOffset: -1,
+// accessToken: accessToken
+// }).addTo(map);
 
-var systems = 'data/tangible-landscape-systems.geojson';
+L.tileLayer.provider('Stamen.TonerLite').addTo(map);
 
-var demos = 'data/tangible-landscape-demos.geojson';
+// create custom markers
+var markerIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 
-var featureLayerSystems = L.mapbox.featureLayer();
-	featureLayerSystems.loadURL(systems);
-	featureLayerSystems.addTo(map);
+// load GeoJSON from an external file
+$.getJSON("data/tangible-landscape-systems.geojson",function(data){
 
-var featureLayerDemos = L.mapbox.featureLayer();
-	featureLayerDemos.loadURL(demos);
-	featureLayerDemos.addTo(map);
+  // add popups
+  function onEachFeature(feature, layer) {
+      layer.bindPopup("<b> Name: </b>" + feature.properties.name + "<br>" + "<b>Location: </b>" + feature.properties.location + "<br>" + "<b>Link: </b>" + "<a href=" + feature.properties.website + ">"+ feature.properties.website +"</a>");
+  }
 
-featureLayerSystems.on('ready', function(){
-	this.eachLayer(function(layer){
-    	layer.setIcon(L.mapbox.marker.icon({
-          "marker-color": "#111",
-          "marker-size": "medium",
-          "marker-symbol": "marker"
-        }))
-    })
-    map.fitBounds(featureLayerSystems.getBounds());
-})
+  // add GeoJSON layer to the map once the file is loaded
+  geojson = L.geoJSON(data, {
+    pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {icon: markerIcon});
+		},
+    onEachFeature: onEachFeature
+  }).addTo(mymap)
+  mymap.fitBounds(geojson.getBounds());
+});
 
-featureLayerDemos.on('ready', function(){
-	this.eachLayer(function(layer){
-    	layer.setIcon(L.mapbox.marker.icon({
-          "marker-color": "#888",
-          "marker-size": "medium",
-          "marker-symbol": "marker"
-        }))
-    })
-})
+
+
+
+
+
+
+
+// // REPLACE feature layers with icons
+//
+// var systems = 'data/tangible-landscape-systems.geojson';
+//
+// var demos = 'data/tangible-landscape-demos.geojson';
+//
+// var featureLayerSystems = L.mapbox.featureLayer();
+// 	featureLayerSystems.loadURL(systems);
+// 	featureLayerSystems.addTo(map);
+//
+// var featureLayerDemos = L.mapbox.featureLayer();
+// 	featureLayerDemos.loadURL(demos);
+// 	featureLayerDemos.addTo(map);
+//
+// featureLayerSystems.on('ready', function(){
+// 	this.eachLayer(function(layer){
+//     	layer.setIcon(L.mapbox.marker.icon({
+//           "marker-color": "#111",
+//           "marker-size": "medium",
+//           "marker-symbol": "marker"
+//         }))
+//     })
+//     map.fitBounds(featureLayerSystems.getBounds());
+// })
+//
+// featureLayerDemos.on('ready', function(){
+// 	this.eachLayer(function(layer){
+//     	layer.setIcon(L.mapbox.marker.icon({
+//           "marker-color": "#888",
+//           "marker-size": "medium",
+//           "marker-symbol": "marker"
+//         }))
+//     })
+// })
 
 // Legend
 var legend = L.control({position: 'topright'});
