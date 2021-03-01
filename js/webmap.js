@@ -1,9 +1,3 @@
-// Mapbox map id
-var mapId = 'baharmon.019h4lm1';
-
-// Mapbox access token
-var accessToken = 'pk.eyJ1IjoiYmFoYXJtb24iLCJhIjoiY2lnaXFwbmE2MDAyaXJxbTAxZGMwcmZneCJ9.M-KRxEOrjKct0rl8hxHJug';
-
 // Map
 var map = L.map('map').setView([35.7818,-78.6764], 3);
 
@@ -151,20 +145,20 @@ var clickHandler = function(e){
   })
 }
 
-// On click
-featureLayerSystems.on('ready', function(){
-  this.eachLayer(function(layer){
-  	layer.on('click', clickHandler);
-  })
-})
-
-// On click
-featureLayerDemos.on('ready', function(){
-  this.eachLayer(function(layer){
-  	layer.on('click', clickHandler);
-  })
-})
-
-map.on('click',function(){
-	$('#sidebar').fadeOut(200);
-});
+// // On click
+// featureLayerSystems.on('ready', function(){
+//   this.eachLayer(function(layer){
+//   	layer.on('click', clickHandler);
+//   })
+// })
+//
+// // On click
+// featureLayerDemos.on('ready', function(){
+//   this.eachLayer(function(layer){
+//   	layer.on('click', clickHandler);
+//   })
+// })
+//
+// map.on('click',function(){
+// 	$('#sidebar').fadeOut(200);
+// });
