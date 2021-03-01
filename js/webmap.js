@@ -1,12 +1,18 @@
-// Mapbox map id
-var mapId = 'baharmon.019h4lm1';
+// // Mapbox map id
+// var mapId = 'baharmon.019h4lm1';
+//
+// // Mapbox access token
+// var accessToken = 'pk.eyJ1IjoiYmFoYXJtb24iLCJhIjoiY2lnaXFwbmE2MDAyaXJxbTAxZGMwcmZneCJ9.M-KRxEOrjKct0rl8hxHJug';
 
-// Mapbox access token
-var accessToken = 'pk.eyJ1IjoiYmFoYXJtb24iLCJhIjoiY2lnaXFwbmE2MDAyaXJxbTAxZGMwcmZneCJ9.M-KRxEOrjKct0rl8hxHJug';
+// // Map object with map id and access token
+// L.mapbox.accessToken = accessToken;
+// var map = L.mapbox.map('map', mapId);
 
-// Map object with map id and access token
-L.mapbox.accessToken = accessToken;
-var map = L.mapbox.map('map', mapId);
+// NEW CODE
+var map = L.map('toner-map').setView([35.7818,-78.6764], 3);
+L.tileLayer.provider('Stamen.TonerLite').addTo(map);
+
+// OLD UNEDITED CODE
 
 // Set the initial view
 map.setView([35.7818,-78.6764], 3);
