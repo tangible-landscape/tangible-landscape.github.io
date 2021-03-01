@@ -36,8 +36,8 @@ $.getJSON("data/tangible-landscape-systems.geojson",function(data){
 			return L.marker(latlng, {icon: markerIcon});
 		},
     onEachFeature: onEachFeature
-  }).addTo(mymap)
-  mymap.fitBounds(geojson.getBounds());
+  }).addTo(map)
+  map.fitBounds(geojson.getBounds());
 });
 
 
