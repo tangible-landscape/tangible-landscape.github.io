@@ -40,7 +40,12 @@ var demoIcon = new L.Icon({
 $.getJSON("data/tangible-landscape-demos.geojson",function(data){
   // add popups
   function onEachFeature(feature, layer) {
-      layer.bindPopup("<b> Name: </b>" + feature.properties.name + "<br>" + "<b>Location: </b>" + feature.properties.location + "<br>" + "<b>Link: </b>" + "<a href=" + feature.properties.website + ">"+ feature.properties.website +"</a>");
+      layer.bindPopup(
+				"<b> Name: </b>" + feature.properties.name + "<br>" +
+				"<b> Institution: </b>" + feature.properties.institution + "<br>" +
+				"<b>Location: </b>" + feature.properties.location + "<br>" +
+				"<b> Team: </b>" + feature.properties.team + "<br>" +
+				"<b>Link: </b>" + "<a href=" + feature.properties.website + ">"+ feature.properties.website +"</a>");
   }
   // add GeoJSON layer to the map once the file is loaded
   demos = L.geoJSON(data, {
