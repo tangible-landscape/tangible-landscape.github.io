@@ -14,8 +14,15 @@ var markerIcon = new L.Icon({
 // load GeoJSON from an external file
 $.getJSON("data/tangible-landscape-systems.geojson",function(data){
   // add popups
-  function onEachFeature(feature, layer) {
-      layer.bindPopup("<b> Name: </b>" + feature.properties.name + "<br>" + "<b>Location: </b>" + feature.properties.location + "<br>" + "<b>Link: </b>" + "<a href=" + feature.properties.website + ">"+ feature.properties.website +"</a>");
+	function onEachFeature(feature, layer) {
+      layer.bindPopup(
+				"<b> Name: </b>" + feature.properties.name + "<br>" +
+				"<b> Institution: </b>" + feature.properties.institution + "<br>" +
+				"<b> Department: </b>" + feature.properties.department + "<br>" +
+				"<b> Location: </b>" + feature.properties.location + "<br>" +
+				"<b> Team: </b>" + feature.properties.team + "<br>" +
+				"<b> Date: </b>" + feature.properties.date + "<br>" +
+				"<b> Link: </b>" + "<a href=" + feature.properties.website + ">" + feature.properties.website +"</a>");
   }
   // add GeoJSON layer to the map once the file is loaded
   geojson = L.geoJSON(data, {
@@ -41,11 +48,13 @@ $.getJSON("data/tangible-landscape-demos.geojson",function(data){
   // add popups
   function onEachFeature(feature, layer) {
       layer.bindPopup(
-				"<b> Name: </b>" + feature.properties.name + "<br>" +
-				"<b> Institution: </b>" + feature.properties.institution + "<br>" +
-				"<b>Location: </b>" + feature.properties.location + "<br>" +
-				"<b> Team: </b>" + feature.properties.team + "<br>" +
-				"<b>Link: </b>" + "<a href=" + feature.properties.website + ">"+ feature.properties.website +"</a>");
+				"<b> Title: </b>" + feature.properties.title + "<br>" +
+				"<b> Event: </b>" + feature.properties.event + "<br>" +
+				"<b> Host: </b>" + feature.properties.host + "<br>" +
+				"<b> Location: </b>" + feature.properties.location + "<br>" +
+				"<b> Authors: </b>" + feature.properties.authors + "<br>" +
+				"<b> Date: </b>" + feature.properties.date + "<br>" +
+				"<b> Link: </b>" + "<a href=" + feature.properties.website + ">" + feature.properties.website +"</a>");
   }
   // add GeoJSON layer to the map once the file is loaded
   demos = L.geoJSON(data, {
