@@ -63,7 +63,6 @@ $.getJSON("data/tangible-landscape-demos.geojson",function(data){
 		},
     onEachFeature: onEachFeature
   }).addTo(map)
-  map.fitBounds(demos.getBounds());
 });
 
 // // Legend
